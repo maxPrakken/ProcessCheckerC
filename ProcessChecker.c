@@ -4,6 +4,11 @@
 #include <string.h>
 
 int main() {
+
+	HANDLE h;
+	DWORD threadID;
+	CreateThread(NULL, 0, /*function name*/, /*arguments to function or null*/, &threadID);
+
 	while (1) {
 		
 		FILE *fp;
@@ -26,8 +31,8 @@ int main() {
 			if (p) { // if newline is not null
 				*p = '\0'; // set newline to null terminator
 			}
-
 			lc++; // +1 on list counter
+
 			//Sleep(1000);
 		}
 
